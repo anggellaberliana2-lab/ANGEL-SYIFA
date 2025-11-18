@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="assets/logo.jpg" alt="Logo kita" class="logo">
+                <h1>BILANA'S BAKERY SHOP</h1>
+            </div>
+            <div class="header-right">
+                <span id="greeting" class="greeting"></span>
+                <button id="logoutBtn" class="btn-secondary">Keluar</button>
+            </div>
+        </header>
+
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="home.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link">MENU</a></li>
+                <li><a href="delivery.html" class="nav-link active">DELIVERY</a></li>
+            </ul>
+        </nav>
+
+        <main class="tracking-main">
+            <h2>Delivery</h2>
+            
+            <div class="tracking-form">
+                <div class="form-group">
+                    <label for="doNumber">Nomor Delivery Order</label>
+                    <input type="text" id="doNumber" name="doNumber" placeholder="Masukkan nomor DO">
+                </div>
+                <button id="searchBtn" class="btn-primary">Cari</button>
+            </div>
+            
+            <div id="trackingResult" class="tracking-result">
+                <!-- Hasil pencarian akan ditampilkan di sini -->
+            </div>
+
+            <!-- Tabel Data Dummy -->
+            <div class="dummy-section">
+                <h3>Data Testing</h3>
+                <p class="subtitle">Gunakan kode berikut untuk melihat orderan delivery:</p>
+                
+                <table class="stock-table dummy-table">
+                    <thead>
+                        <tr>
+                            <th>Id Pesanan</th>
+                            <th>Nama Pelanggan</th>
+                            <th>Status</th>
+                            <th>Progress</th>
+                            <th>Tanggal Kirim</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dummyTableBody">
+                        <!-- Data akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

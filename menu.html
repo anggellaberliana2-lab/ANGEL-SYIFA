@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="assets/logo.jpg" alt="Logo kita" class="logo">
+                <h1>BILANA'S BAKERY SHOP</h1>
+            </div>
+            <div class="header-right">
+                <span id="greeting" class="greeting"></span>
+                <button id="logoutBtn" class="btn-secondary">Keluar</button>
+            </div>
+        </header>
+
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="home.html" class="nav-link">HOME</a></li>
+                <li><a href="menu.html" class="nav-link active">MENU</a></li>
+                <li><a href="delivery.html" class="nav-link">DELIVERY</a></li>
+            </ul>
+        </nav>
+
+        <main class="stok-main">
+            <div class="stok-header">
+                <h2>Informasi Dessert</h2>
+                <button id="addStockBtn" class="btn-primary">Tambah Stok</button>
+            </div>
+            
+            <table id="stockTable" class="stock-table">
+                <thead>
+                    <tr>
+                        <th>ID Dessert</th>
+                        <th>Nama Dessert</th>
+                        <th>Status</th>
+                        <th>Deskripsi</th>
+                        <th>Stok</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="stockTableBody">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Modal Tambah Stok -->
+    <div id="addStockModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tambah Stok Baru</h2>
+            <form id="addStockForm">
+                <div class="form-group">
+                    <label for="idKue">Id Kue</label>
+                    <input type="text" id="idKue" name="idKue" required>
+                </div>
+                <div class="form-group">
+                    <label for="namaKue">Nama Kue</label>
+                    <input type="text" id="namaKue" name="namaKue" required>
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <input type="text" id="deskripsi" name="deskripsi" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option value="Tersedia">Tersedia</option>
+                        <option value="Habis">Habis</option>
+                        <option value="Terbatas">Terbatas</option>
+                        <option value="Segera Hadir">Segera Hadir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stok">Stok</label>
+                    <input type="number" id="stok" name="stok" required>
+                </div>
+                <button type="submit" class="btn-primary">Simpan</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
